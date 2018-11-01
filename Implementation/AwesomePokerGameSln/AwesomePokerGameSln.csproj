@@ -294,5 +294,20 @@
   <ItemGroup>
     <None Include="Resources\queen_of_spades2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\halloween_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canada_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waluigi_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\washington_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_back.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
