@@ -483,6 +483,26 @@ namespace AwesomePokerGameSln.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap canada_back {
+            get {
+                object obj = ResourceManager.GetObject("canada_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap halloween_back {
+            get {
+                object obj = ResourceManager.GetObject("halloween_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jack_of_clubs {
             get {
                 object obj = ResourceManager.GetObject("jack_of_clubs", resourceCulture);
@@ -643,6 +663,16 @@ namespace AwesomePokerGameSln.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ninja_back {
+            get {
+                object obj = ResourceManager.GetObject("ninja_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap queen_of_clubs {
             get {
                 object obj = ResourceManager.GetObject("queen_of_clubs", resourceCulture);
@@ -736,6 +766,26 @@ namespace AwesomePokerGameSln.Properties {
         internal static System.Drawing.Bitmap title_screen {
             get {
                 object obj = ResourceManager.GetObject("title_screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap waluigi_back {
+            get {
+                object obj = ResourceManager.GetObject("waluigi_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap washington_back {
+            get {
+                object obj = ResourceManager.GetObject("washington_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
