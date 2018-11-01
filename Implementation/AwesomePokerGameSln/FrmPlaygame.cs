@@ -31,7 +31,7 @@ namespace AwesomePokerGameSln {
             // create and display the cards for the dealer
             dealerCardPics = new PictureBox[5];
             for (int c = 1; c <= 5; c++) {
-                dealerCardPics[c - 1] = this.Controls.Find("pictureBox" + c.ToString(), true)[0] as PictureBox;
+               dealerCardPics[c - 1] = this.Controls.Find("pictureBox" + c.ToString(), true)[0] as PictureBox;
             }
         }
 
@@ -61,7 +61,7 @@ namespace AwesomePokerGameSln {
             foreach (PictureBox dealerCardPic in dealerCardPics) {
                 CardType card = deck.nextCard();
                 cards[index++] = card;
-                dealerCardPic.BackgroundImage = CardImageHelper.cardToBitmap(card);
+                dealerCardPic.BackgroundImage = CardImageHelper.getResource("halloween_back");
             }
 
             // set those cards as the player's hand and then determine the best combination of cards in the

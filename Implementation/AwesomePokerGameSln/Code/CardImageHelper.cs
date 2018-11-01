@@ -46,5 +46,10 @@ namespace AwesomePokerGameSln.Code {
             // return the bitmap with the dynamically created name
             return Resources.ResourceManager.GetObject(faceName + "_of_" + suitName) as Bitmap;
         }
+
+        public static Bitmap getResource(String name)
+        {
+            return Resources.ResourceManager.GetObject(name) as Bitmap;
+        }
     }
 }
