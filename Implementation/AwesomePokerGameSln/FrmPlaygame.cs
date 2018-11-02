@@ -44,7 +44,7 @@ namespace AwesomePokerGameSln {
             // integer is the suit
             Tuple<int, int>[] cards = new Tuple<int, int>[5];
 
-            // grab a new card for each card the dealer needs and give the card its respective image
+            // grab a new card for each card the player needs and give the card its respective image
             int index = 0;
             foreach (PictureBox playerCardPic in playerCardPics) {
                 CardType card = deck.nextCard();
@@ -52,21 +52,22 @@ namespace AwesomePokerGameSln {
                 playerCardPic.BackgroundImage = CardImageHelper.cardToBitmap(card);
             }
 
-            // set these cards as the dealer's hand, then start creating the player's hand
-            dealerHand = new Hand(cards);
+            // set these cards as the player's hand, then start creating the dealer's hand
+            playerHand = new Hand(cards);
             cards = new CardType[5];
             index = 0;
 
-            // grab a new card for each card the player needs and give the card its respective image
+            // grab a new card for each card the dealer needs and give the card its respective image
             foreach (PictureBox dealerCardPic in dealerCardPics) {
                 CardType card = deck.nextCard();
                 cards[index++] = card;
                 dealerCardPic.BackgroundImage = CardImageHelper.getResource("halloween_back");
             }
 
-            // set those cards as the player's hand and then determine the best combination of cards in the
+            // set those cards as the dealer's hand and then determine the best combination of cards in the
             // player's hand
-            playerHand = new Hand(cards);
+            dealerHand = new Hand(cards);
+
             label_hand_type.Text = playerHand.getHandType().ToString();
         }
     

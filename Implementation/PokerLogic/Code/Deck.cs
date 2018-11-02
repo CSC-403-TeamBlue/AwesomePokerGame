@@ -18,7 +18,6 @@ namespace AwesomePokerGameSln.Code {
             newDeck();
             shuffleDeck();
         }
-
         
         // generates a new deck of int,int tuples that represent cards
         public void newDeck() {
