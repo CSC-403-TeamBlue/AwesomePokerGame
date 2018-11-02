@@ -88,5 +88,62 @@ namespace AwesomePokerGameSln {
         private void button1_Click(object sender, EventArgs e) {
             dealCards();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            discardCards();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            revealDealerHand();
+        }
+
+
+
+        private void discardCards()
+        {
+            Random RNG = new Random();
+            // create an array of tuple that represents a card - the first integer is the face while the second
+            // integer is the suit
+            Tuple<int, int>[] cards = new Tuple<int, int>[5];
+            int numberDealerToDiscard = RNG.Next(1, 6);
+
+            //Create the array based off of the amount of cards the RNG  gave us
+            int index = 0;
+            cards = dealerHand.getCurrentHand();
+
+            // grab a new card for each card the dealer needs
+            for(int l = 0; l < numberDealerToDiscard; l++)
+            {
+                CardType card = deck.nextCard();
+                cards[index++] = card;
+             
+            }
+
+            foreach (PictureBox dealerCardPic in dealerCardPics)
+            {
+
+                dealerCardPic.BackgroundImage = CardImageHelper.getResource("halloween_back");
+            }
+
+            // set those cards as the dealer's hand
+            dealerHand = new Hand(cards);
+        }
+
+        private void revealDealerHand()
+        {
+            Tuple<int, int>[] cards = new Tuple<int, int>[5];
+            cards = dealerHand.getCurrentHand();
+            int index = 0;
+            foreach (PictureBox dealerCardPic in dealerCardPics)
+            {
+                
+                dealerCardPic.BackgroundImage = CardImageHelper.cardToBitmap(cards[index]);
+                index++;
+            }
+        }
     }
 }
