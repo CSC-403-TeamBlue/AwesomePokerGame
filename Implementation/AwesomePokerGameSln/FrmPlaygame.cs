@@ -17,7 +17,11 @@ namespace AwesomePokerGameSln {
         private PictureBox[] dealerCardPics;
         private Hand playerHand;
         private Hand dealerHand;
-    
+        private int NumAllowedOptions = 3;
+        List<CheckBox> Selections = new List<CheckBox>();
+
+
+
         // create the form
         public FrmPlaygame() {
             InitializeComponent();
@@ -86,25 +90,119 @@ namespace AwesomePokerGameSln {
 
         // redeal button
         private void button1_Click(object sender, EventArgs e) {
+
+            button1.Enabled = true;
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+
+            if (Selections.Count > 0)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    Selections.RemoveAt(0);
+                    i++;
+                }
+            }
+
             dealCards();
         }
 
+        // discard button
         private void button2_Click(object sender, EventArgs e)
         {
+            if (Selections.Count > 0)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    Selections.RemoveAt(0);
+                    i++;
+                }
+            }
 
             discardCards();
         }
 
+        // reveal button
         private void button3_Click(object sender, EventArgs e)
         {
-
             revealDealerHand();
         }
 
+        // Make sure we don't have too many options selected.
+        private void chkOption_CheckChanged(object sender, EventArgs e)
+        {
 
+            CheckBox chk = sender as CheckBox;
+            if (chk.Checked)
+            {
+                // Add this selection.
+                Selections.Add(chk);
+
+                // Make sure we don't have too many.
+                if (Selections.Count > NumAllowedOptions)
+                {
+                    // Remove the oldest selection.
+                    Selections[0].Checked = false;
+                    Selections.RemoveAt(0);
+                }
+            }
+            else
+            {
+                // Remove this selection.
+                Selections.Remove(chk);
+            }
+        }
 
         private void discardCards()
         {
+            Tuple<int, int>[] playerCards = new Tuple<int, int>[5];
+            playerCards = playerHand.getCurrentHand();
+
+            if (checkBox1.Checked == true)
+            {
+                CardType playerCard = deck.nextCard();
+                playerCards[0] = playerCard;
+                checkBox1.Checked = false;
+            }
+            if (checkBox2.Checked == true)
+            {
+                CardType playerCard = deck.nextCard();
+                playerCards[1] = playerCard;
+                checkBox2.Checked = false;
+            }
+            if (checkBox3.Checked == true)
+            {
+                CardType playerCard = deck.nextCard();
+                playerCards[2] = playerCard;
+                checkBox3.Checked = false;
+            }
+            if (checkBox4.Checked == true)
+            {
+                CardType playerCard = deck.nextCard();
+                playerCards[3] = playerCard;
+                checkBox4.Checked = false;
+            }
+            if (checkBox5.Checked == true)
+            {
+                CardType playerCard = deck.nextCard();
+                playerCards[4] = playerCard;
+                checkBox5.Checked = false;
+            }
+
+            int playerIndex = 0;
+
+            foreach (PictureBox playerCardPic in playerCardPics)
+            {
+
+                playerCardPic.BackgroundImage = CardImageHelper.cardToBitmap(playerCards[playerIndex]);
+                playerIndex++;
+            }
+
+            playerHand = new Hand(playerCards);
+
             Random RNG = new Random();
             // create an array of tuple that represents a card - the first integer is the face while the second
             // integer is the suit
@@ -131,6 +229,8 @@ namespace AwesomePokerGameSln {
 
             // set those cards as the dealer's hand
             dealerHand = new Hand(cards);
+
+            button1.Enabled = false;
         }
 
         private void revealDealerHand()
