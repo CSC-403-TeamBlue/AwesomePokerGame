@@ -19,6 +19,12 @@ namespace AwesomePokerGameSln {
         private Hand dealerHand;
         private int NumAllowedOptions = 3;
         List<CheckBox> Selections = new List<CheckBox>();
+        private int blind = 10;
+        private int bet;
+        private int dealerBet;
+        private int playerPoints = 100;
+        private int dealerPoints = 100;
+
 
 
 
@@ -38,6 +44,8 @@ namespace AwesomePokerGameSln {
                dealerCardPics[c - 1] = this.Controls.Find("pictureBox" + c.ToString(), true)[0] as PictureBox;
             }
         }
+
+
 
         // deal cards to the player and dealer
         private void dealCards() {
@@ -71,7 +79,7 @@ namespace AwesomePokerGameSln {
             // set those cards as the dealer's hand and then determine the best combination of cards in the
             // player's hand
             dealerHand = new Hand(cards);
-
+            label1.Text = playerPoints.ToString();
             label_hand_type.Text = playerHand.getHandType().ToString();
         }
     
@@ -81,12 +89,25 @@ namespace AwesomePokerGameSln {
                 Application.OpenForms[i].Close();
         }
 
-        // load a new game
-        private void FrmPlaygame_Load(object sender, EventArgs e) {
+
+ 
+
+    // load a new game
+    private void FrmPlaygame_Load(object sender, EventArgs e) {
             // create a new deck and deal out its cards
             deck = new Deck();
             dealCards();
         }
+
+        private void Reset()
+        {
+            dealerPoints = 100;
+            playerPoints = 100;
+            FrmPlaygame frmPlaygame = new FrmPlaygame();
+            frmPlaygame.Show();
+            this.Dispose(false);
+        }
+
 
         // redeal button
         private void button1_Click(object sender, EventArgs e) {
@@ -244,6 +265,103 @@ namespace AwesomePokerGameSln {
                 dealerCardPic.BackgroundImage = CardImageHelper.cardToBitmap(cards[index]);
                 index++;
             }
+        }
+
+        private void Bet_Click(object sender, EventArgs e)
+        {
+            Bet();
+        }
+
+        //Bet however many points you want as long as you have enough
+        private void Bet()
+        {
+            //dealer's bet is randomly set based on the blind
+            if (dealerPoints >= blind)
+            {
+                Random uhh = new Random();
+                dealerBet = uhh.Next(blind, dealerPoints);
+            }
+            //If he doesn't have enough, he's all in
+            else
+            {
+                dealerBet = dealerPoints;
+            }
+            //Opens a window to set your bet to match the dealer or all in
+            using (FormBet formbet = new FormBet())
+            {
+                //If you have enough to match the dealer, you can bet it
+                if (playerPoints >= dealerBet)
+                {
+                    formbet.label1.Visible = true;
+                    formbet.label1.Text = "The dealer's bet is " + dealerBet;
+                    formbet.numericUpDown1.Maximum = playerPoints;
+                    formbet.numericUpDown1.Minimum = dealerBet;
+                    formbet.numericUpDown1.Value = dealerBet;
+                    formbet.ShowDialog();
+                    bet = Convert.ToInt32(formbet.numericUpDown1.Value);
+                }
+                //If you don't have enough, you have to all in
+                else if (playerPoints < dealerBet)
+                {
+                    formbet.label1.Text = "The dealer's bet is " + dealerBet + " You Must All In";
+                    formbet.numericUpDown1.Visible = false;
+                    formbet.label1.Visible = true;
+                    formbet.ShowDialog();
+                    bet = playerPoints;
+                }
+            }
+            roundUpdate();
+        }
+        //Update after bet has been made
+        private void roundUpdate()
+        {
+            //If your hand is better, you win the pot
+            if ((int)playerHand.getHandType() < (int)dealerHand.getHandType())
+            {
+                MessageBox.Show("Your Hand Won", "Hand Results", MessageBoxButtons.OK);
+                playerPoints += dealerBet;
+                dealerPoints -= dealerBet;
+            }
+            //If your hand is worse, you lose
+            else if ((int)playerHand.getHandType() > (int)dealerHand.getHandType())
+            {
+                MessageBox.Show("The Dealer's Hand Was Better", "Hand Results", MessageBoxButtons.OK);
+                playerPoints -= bet;
+                dealerPoints += bet;
+            }
+            //If you both have the same handtype, the pot is split
+            else
+            {
+                MessageBox.Show("Split Pot!", "Hand Results", MessageBoxButtons.OK);
+                double pot = dealerBet + bet;
+                pot = Math.Floor(pot / 2);
+                playerPoints -= bet;
+                dealerPoints -= dealerBet;
+                playerPoints += (int)pot;
+                dealerPoints += (int)pot;
+            }
+            //Update points displayed
+            label1.Text = playerPoints.ToString();
+            //If you have points to bet, redeal
+            if (playerPoints > 0 & dealerPoints > 0)
+            {
+                blind += 5;
+                dealCards();
+            }
+            //If you've run out, the game's over
+            else if (playerPoints <= 0)
+            {
+                MessageBox.Show("You Lose", "Results", MessageBoxButtons.OK);
+                Reset();
+            }
+            else if (dealerPoints <= 0)
+            {
+                MessageBox.Show("You Win!", "Results", MessageBoxButtons.OK);
+                Reset();
+            }
+
+
+
         }
     }
 }
