@@ -44,6 +44,7 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.betButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCard3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCard4)).BeginInit();
@@ -196,7 +197,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(797, 479);
+            this.button2.Location = new System.Drawing.Point(797, 467);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(167, 38);
@@ -306,11 +307,23 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "label1";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(797, 513);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(167, 38);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Reset";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // FrmPlaygame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 554);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.betButton);
             this.Controls.Add(this.button2);
@@ -375,5 +388,6 @@
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.Button betButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
     }
 }
