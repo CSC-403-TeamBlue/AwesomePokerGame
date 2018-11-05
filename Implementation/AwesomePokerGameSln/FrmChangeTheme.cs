@@ -20,9 +20,10 @@ namespace AwesomePokerGameSln
         // go back to settings
         private void button_back_Click(object sender, EventArgs e)
         {
-            FrmSettings frmSettings = new FrmSettings();
-            frmSettings.Show();
             Hide();
+            FrmSettings frmSettings = new FrmSettings();
+            frmSettings.ShowDialog();
+            Close();
         }
 
         private void deck_halloween_Click(object sender, EventArgs e)

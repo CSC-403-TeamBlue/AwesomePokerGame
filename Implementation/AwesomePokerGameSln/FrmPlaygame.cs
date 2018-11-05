@@ -29,6 +29,8 @@ namespace AwesomePokerGameSln {
         public FrmPlaygame() {
             InitializeComponent();
 
+            Console.WriteLine("Amount of stars - " + Stars.Amount);
+
             // create and display the cards for the player
             playerCardPics = new PictureBox[5];
             for (int c = 1; c <= 5; c++) {
@@ -105,25 +107,24 @@ namespace AwesomePokerGameSln {
             dealCards();
         }
 
-        private void Reset()
+        // bring the user back to the title screen
+        private void GoHome()
         {
-            dealerPoints = 100;
-            playerPoints = 100;
-            FrmPlaygame frmPlaygame = new FrmPlaygame();
-            frmPlaygame.Show();
-            this.Dispose(false);
+            Hide();
+            FrmTitle frmTitle = new FrmTitle();
+            frmTitle.ShowDialog();
+            Close();
         }
 
 
         // redeal button
-        private void button1_Click(object sender, EventArgs e) {
-
+        private void redeal_Click(object sender, EventArgs e) {
             RedealClick();
         }
 
         private void RedealClick()
         {
-            button1.Enabled = true;
+            button_discard.Enabled = true;
             betButton.Enabled = true;
             checkBox1.Checked = false;
             checkBox2.Checked = false;
@@ -145,7 +146,7 @@ namespace AwesomePokerGameSln {
         
 
         // discard button
-        private void button2_Click(object sender, EventArgs e)
+        private void discard_Click(object sender, EventArgs e)
         {
             if (Selections.Count > 0)
             {
@@ -160,7 +161,7 @@ namespace AwesomePokerGameSln {
         }
 
         // reveal button
-        private void button3_Click(object sender, EventArgs e)
+        private void reveal_Click(object sender, EventArgs e)
         {
             revealDealerHand();
         }
@@ -264,7 +265,7 @@ namespace AwesomePokerGameSln {
             // set those cards as the dealer's hand
             dealerHand = new Hand(cards);
 
-            button1.Enabled = false;
+            button_discard.Enabled = false;
         }
 
         private void revealDealerHand()
@@ -369,19 +370,19 @@ namespace AwesomePokerGameSln {
             else if (playerPoints <= 0)
             {
                 MessageBox.Show("You Lose", "Results", MessageBoxButtons.OK);
-                Reset();
+                GoHome();
             }
             else if (dealerPoints <= 0)
             {
                 MessageBox.Show("You Win!", "Results", MessageBoxButtons.OK);
-                Reset();
+                GoHome();
             }
         }
 
         // reset button
-        private void button3_Click_1(object sender, EventArgs e)
+        private void home_Click(object sender, EventArgs e)
         {
-            Reset();
+            GoHome();
         }
     }
 }
