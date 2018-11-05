@@ -332,6 +332,49 @@ namespace AwesomePokerGameSln {
                 }
             }
 
+            // show the user the default bet
+            MessageBox.Show("The default bet is " + bet, "Hand Results", MessageBoxButtons.OK);
+
+            // depending on the players hand, give them stars
+            switch(playerHand.getHandType())
+            {
+                case HandType.THREE:
+                    {
+                        Stars.Amount++;
+                    }
+                    break;
+                case HandType.STRAIGHT:
+                    {
+                        Stars.Amount += 2;
+                    }
+                    break;
+                case HandType.FLUSH:
+                    {
+                        Stars.Amount += 3;
+                    }
+                    break;
+                case HandType.FULL_HOUSE:
+                    {
+                        Stars.Amount += 4;
+                    }
+                    break;
+                case HandType.FOUR:
+                    {
+                        Stars.Amount += 5;
+                    }
+                    break;
+                case HandType.STR_FLUSH:
+                    {
+                        Stars.Amount += 10;
+                    }
+                    break;
+                case HandType.ROYAL_FLUSH:
+                    {
+                        Stars.Amount += 20;
+                    }
+                    break;
+            }
+
             //If your hand is better, you win the pot
             if ((int)playerHand.getHandType() < (int)dealerHand.getHandType())
             {

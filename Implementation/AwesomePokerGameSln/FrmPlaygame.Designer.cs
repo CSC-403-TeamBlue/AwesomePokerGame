@@ -383,15 +383,15 @@
     private System.Windows.Forms.PictureBox pictureBox4;
     private System.Windows.Forms.PictureBox pictureBox3;
     private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button_discard;
-        private System.Windows.Forms.Button button_reveal;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.Button betButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_home;
+    private System.Windows.Forms.Button button_discard;
+    private System.Windows.Forms.Button button_reveal;
+    private System.Windows.Forms.CheckBox checkBox1;
+    private System.Windows.Forms.CheckBox checkBox2;
+    private System.Windows.Forms.CheckBox checkBox3;
+    private System.Windows.Forms.CheckBox checkBox4;
+    private System.Windows.Forms.CheckBox checkBox5;
+    private System.Windows.Forms.Button betButton;
+    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Button button_home;
     }
 }
