@@ -336,5 +336,9 @@
   <ItemGroup>
     <None Include="Resources\ninja_back.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\locked_back.png" />
+    <Content Include="Resources\star.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

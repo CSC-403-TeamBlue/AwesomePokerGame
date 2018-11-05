@@ -25,9 +25,6 @@ namespace AwesomePokerGameSln {
         private int playerPoints = 100;
         private int dealerPoints = 100;
 
-
-
-
         // create the form
         public FrmPlaygame() {
             InitializeComponent();
@@ -44,8 +41,6 @@ namespace AwesomePokerGameSln {
                dealerCardPics[c - 1] = this.Controls.Find("pictureBox" + c.ToString(), true)[0] as PictureBox;
             }
         }
-
-
 
         // deal cards to the player and dealer
         private void dealCards() {
@@ -89,11 +84,8 @@ namespace AwesomePokerGameSln {
                 Application.OpenForms[i].Close();
         }
 
-
- 
-
-    // load a new game
-    private void FrmPlaygame_Load(object sender, EventArgs e) {
+        // load a new game
+        private void FrmPlaygame_Load(object sender, EventArgs e) {
             // create a new deck and deal out its cards
             deck = new Deck();
             dealCards();
@@ -111,7 +103,6 @@ namespace AwesomePokerGameSln {
 
         // redeal button
         private void button1_Click(object sender, EventArgs e) {
-
             button1.Enabled = true;
             checkBox1.Checked = false;
             checkBox2.Checked = false;
@@ -155,7 +146,6 @@ namespace AwesomePokerGameSln {
         // Make sure we don't have too many options selected.
         private void chkOption_CheckChanged(object sender, EventArgs e)
         {
-
             CheckBox chk = sender as CheckBox;
             if (chk.Checked)
             {
@@ -359,11 +349,9 @@ namespace AwesomePokerGameSln {
                 MessageBox.Show("You Win!", "Results", MessageBoxButtons.OK);
                 Reset();
             }
-
-
-
         }
 
+        // reset button
         private void button3_Click_1(object sender, EventArgs e)
         {
             Reset();
