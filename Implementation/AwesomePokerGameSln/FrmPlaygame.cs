@@ -52,6 +52,20 @@ namespace AwesomePokerGameSln {
             // first shuffle the deck
             deck.shuffleDeck();
 
+            //set dealer's bet
+            if (dealerPoints >= blind)
+            {
+                Random uhh = new Random();
+                dealerBet = uhh.Next(blind, dealerPoints);
+            }
+            //If he doesn't have enough, he's all in
+            else
+            {
+                dealerBet = dealerPoints;
+            }
+
+            bet = 0;
+
             // create an array of tuple that represents a card - the first integer is the face while the second
             // integer is the suit
             Tuple<int, int>[] cards = new Tuple<int, int>[5];
@@ -112,7 +126,13 @@ namespace AwesomePokerGameSln {
         // redeal button
         private void button1_Click(object sender, EventArgs e) {
 
+            RedealClick();
+        }
+
+        private void RedealClick()
+        {
             button1.Enabled = true;
+            betButton.Enabled = true;
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             checkBox3.Checked = false;
@@ -130,6 +150,7 @@ namespace AwesomePokerGameSln {
 
             dealCards();
         }
+        
 
         // discard button
         private void button2_Click(object sender, EventArgs e)
@@ -223,6 +244,7 @@ namespace AwesomePokerGameSln {
             }
 
             playerHand = new Hand(playerCards);
+            label_hand_type.Text = playerHand.getHandType().ToString();
 
             Random RNG = new Random();
             // create an array of tuple that represents a card - the first integer is the face while the second
@@ -265,6 +287,7 @@ namespace AwesomePokerGameSln {
                 dealerCardPic.BackgroundImage = CardImageHelper.cardToBitmap(cards[index]);
                 index++;
             }
+            roundUpdate();
         }
 
         private void Bet_Click(object sender, EventArgs e)
@@ -275,17 +298,7 @@ namespace AwesomePokerGameSln {
         //Bet however many points you want as long as you have enough
         private void Bet()
         {
-            //dealer's bet is randomly set based on the blind
-            if (dealerPoints >= blind)
-            {
-                Random uhh = new Random();
-                dealerBet = uhh.Next(blind, dealerPoints);
-            }
-            //If he doesn't have enough, he's all in
-            else
-            {
-                dealerBet = dealerPoints;
-            }
+           
             //Opens a window to set your bet to match the dealer or all in
             using (FormBet formbet = new FormBet())
             {
@@ -310,11 +323,23 @@ namespace AwesomePokerGameSln {
                     bet = playerPoints;
                 }
             }
-            roundUpdate();
         }
         //Update after bet has been made
         private void roundUpdate()
         {
+            //if they didn't make a bet on the hand, set the default bet to the dealer's bet or go all in if the player doesn't have enough points
+            if(bet <= 0)
+            {
+                if(playerPoints < dealerBet)
+                {
+                    bet = playerPoints;
+                }
+                else
+                {
+                    bet = dealerBet;
+                }
+            }
+
             //If your hand is better, you win the pot
             if ((int)playerHand.getHandType() < (int)dealerHand.getHandType())
             {
@@ -340,13 +365,14 @@ namespace AwesomePokerGameSln {
                 playerPoints += (int)pot;
                 dealerPoints += (int)pot;
             }
+
             //Update points displayed
             label1.Text = playerPoints.ToString();
             //If you have points to bet, redeal
             if (playerPoints > 0 & dealerPoints > 0)
             {
                 blind += 5;
-                dealCards();
+                RedealClick();
             }
             //If you've run out, the game's over
             else if (playerPoints <= 0)
