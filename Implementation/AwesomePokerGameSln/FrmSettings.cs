@@ -20,17 +20,19 @@ namespace AwesomePokerGameSln
         // open change themes menu
         private void button_change_theme_Click(object sender, EventArgs e)
         {
-            FrmChangeTheme frmChangeTheme = new FrmChangeTheme();
-            frmChangeTheme.Show();
             Hide();
+            FrmChangeTheme frmChangeTheme = new FrmChangeTheme();
+            frmChangeTheme.ShowDialog();
+            Close();
         }
 
         // go back to main menu
         private void button_back_Click(object sender, EventArgs e)
         {
-            FrmTitle frmTitle = new FrmTitle();
-            frmTitle.Show();
             Hide();
+            FrmTitle frmTitle = new FrmTitle();
+            frmTitle.ShowDialog();
+            Close();
         }
 
         // toggle fullscreen

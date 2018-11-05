@@ -29,6 +29,11 @@ namespace AwesomePokerGameSln.Code {
             this.cards = cards;
         }
 
+        public Tuple<int, int>[] getCurrentHand()
+        {
+            return cards;
+        }
+
         // determine how good the player's hand is
         public HandType getHandType() {
             // automatically assume the player has the worst hand (like actual garbage)

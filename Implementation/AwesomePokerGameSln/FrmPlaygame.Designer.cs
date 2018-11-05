@@ -35,6 +35,16 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button_discard = new System.Windows.Forms.Button();
+            this.button_reveal = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.betButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_home = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCard3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCard4)).BeginInit();
@@ -50,6 +60,7 @@
             // picCard1
             // 
             this.picCard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCard1.Enabled = false;
             this.picCard1.Location = new System.Drawing.Point(101, 225);
             this.picCard1.Margin = new System.Windows.Forms.Padding(4);
             this.picCard1.Name = "picCard1";
@@ -60,6 +71,7 @@
             // picCard3
             // 
             this.picCard3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCard3.Enabled = false;
             this.picCard3.Location = new System.Drawing.Point(460, 225);
             this.picCard3.Margin = new System.Windows.Forms.Padding(4);
             this.picCard3.Name = "picCard3";
@@ -70,6 +82,7 @@
             // picCard4
             // 
             this.picCard4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCard4.Enabled = false;
             this.picCard4.Location = new System.Drawing.Point(640, 225);
             this.picCard4.Margin = new System.Windows.Forms.Padding(4);
             this.picCard4.Name = "picCard4";
@@ -80,6 +93,7 @@
             // picCard5
             // 
             this.picCard5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCard5.Enabled = false;
             this.picCard5.Location = new System.Drawing.Point(825, 225);
             this.picCard5.Margin = new System.Windows.Forms.Padding(4);
             this.picCard5.Name = "picCard5";
@@ -90,6 +104,7 @@
             // picCard2
             // 
             this.picCard2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCard2.Enabled = false;
             this.picCard2.Location = new System.Drawing.Point(281, 225);
             this.picCard2.Margin = new System.Windows.Forms.Padding(4);
             this.picCard2.Name = "picCard2";
@@ -99,25 +114,27 @@
             // 
             // button_redeal
             // 
-            this.button_redeal.Location = new System.Drawing.Point(240, 411);
+            this.button_redeal.Location = new System.Drawing.Point(240, 421);
             this.button_redeal.Margin = new System.Windows.Forms.Padding(4);
             this.button_redeal.Name = "button_redeal";
             this.button_redeal.Size = new System.Drawing.Size(239, 106);
             this.button_redeal.TabIndex = 6;
             this.button_redeal.Text = "Redeal";
             this.button_redeal.UseVisualStyleBackColor = true;
-            this.button_redeal.Click += new System.EventHandler(this.button1_Click);
+            this.button_redeal.Click += new System.EventHandler(this.redeal_Click);
             // 
             // label_hand_type
             // 
+            this.label_hand_type.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_hand_type.AutoSize = true;
             this.label_hand_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_hand_type.Location = new System.Drawing.Point(571, 425);
+            this.label_hand_type.Location = new System.Drawing.Point(508, 421);
             this.label_hand_type.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_hand_type.Name = "label_hand_type";
             this.label_hand_type.Size = new System.Drawing.Size(124, 42);
             this.label_hand_type.TabIndex = 7;
             this.label_hand_type.Text = "label2";
+            this.label_hand_type.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -169,11 +186,152 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // button_discard
+            // 
+            this.button_discard.Location = new System.Drawing.Point(797, 421);
+            this.button_discard.Margin = new System.Windows.Forms.Padding(4);
+            this.button_discard.Name = "button_discard";
+            this.button_discard.Size = new System.Drawing.Size(167, 38);
+            this.button_discard.TabIndex = 13;
+            this.button_discard.Text = "Discard";
+            this.button_discard.UseVisualStyleBackColor = true;
+            this.button_discard.Click += new System.EventHandler(this.discard_Click);
+            // 
+            // button_reveal
+            // 
+            this.button_reveal.Location = new System.Drawing.Point(797, 467);
+            this.button_reveal.Margin = new System.Windows.Forms.Padding(4);
+            this.button_reveal.Name = "button_reveal";
+            this.button_reveal.Size = new System.Drawing.Size(167, 38);
+            this.button_reveal.TabIndex = 14;
+            this.button_reveal.Text = "Reveal";
+            this.button_reveal.UseVisualStyleBackColor = true;
+            this.button_reveal.Click += new System.EventHandler(this.reveal_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Location = new System.Drawing.Point(91, 218);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.MinimumSize = new System.Drawing.Size(147, 197);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(147, 197);
+            this.checkBox1.TabIndex = 15;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Click += new System.EventHandler(this.chkOption_CheckChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.checkBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox2.Location = new System.Drawing.Point(271, 217);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox2.MinimumSize = new System.Drawing.Size(147, 197);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(147, 197);
+            this.checkBox2.TabIndex = 16;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Click += new System.EventHandler(this.chkOption_CheckChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.checkBox3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox3.Location = new System.Drawing.Point(449, 217);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox3.MinimumSize = new System.Drawing.Size(147, 197);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(147, 197);
+            this.checkBox3.TabIndex = 17;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.Click += new System.EventHandler(this.chkOption_CheckChanged);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.checkBox4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox4.Location = new System.Drawing.Point(629, 217);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox4.MinimumSize = new System.Drawing.Size(147, 197);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(147, 197);
+            this.checkBox4.TabIndex = 18;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.Click += new System.EventHandler(this.chkOption_CheckChanged);
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.checkBox5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox5.Location = new System.Drawing.Point(815, 217);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox5.MinimumSize = new System.Drawing.Size(147, 197);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(147, 197);
+            this.checkBox5.TabIndex = 19;
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.Click += new System.EventHandler(this.chkOption_CheckChanged);
+            // 
+            // betButton
+            // 
+            this.betButton.Location = new System.Drawing.Point(1003, 29);
+            this.betButton.Name = "betButton";
+            this.betButton.Size = new System.Drawing.Size(211, 86);
+            this.betButton.TabIndex = 20;
+            this.betButton.Text = "Bet";
+            this.betButton.UseVisualStyleBackColor = true;
+            this.betButton.Click += new System.EventHandler(this.Bet_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(508, 485);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 42);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button_home
+            // 
+            this.button_home.Location = new System.Drawing.Point(797, 513);
+            this.button_home.Margin = new System.Windows.Forms.Padding(4);
+            this.button_home.Name = "button_home";
+            this.button_home.Size = new System.Drawing.Size(167, 38);
+            this.button_home.TabIndex = 22;
+            this.button_home.Text = "Home";
+            this.button_home.UseVisualStyleBackColor = true;
+            this.button_home.Click += new System.EventHandler(this.home_Click);
+            // 
             // FrmPlaygame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1259, 554);
+            this.Controls.Add(this.button_home);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.betButton);
+            this.Controls.Add(this.button_reveal);
+            this.Controls.Add(this.button_discard);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -186,6 +344,11 @@
             this.Controls.Add(this.picCard4);
             this.Controls.Add(this.picCard3);
             this.Controls.Add(this.picCard1);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox5);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPlaygame";
             this.Text = "FrmPlaygame";
@@ -220,5 +383,15 @@
     private System.Windows.Forms.PictureBox pictureBox4;
     private System.Windows.Forms.PictureBox pictureBox3;
     private System.Windows.Forms.PictureBox pictureBox1;
+    private System.Windows.Forms.Button button_discard;
+    private System.Windows.Forms.Button button_reveal;
+    private System.Windows.Forms.CheckBox checkBox1;
+    private System.Windows.Forms.CheckBox checkBox2;
+    private System.Windows.Forms.CheckBox checkBox3;
+    private System.Windows.Forms.CheckBox checkBox4;
+    private System.Windows.Forms.CheckBox checkBox5;
+    private System.Windows.Forms.Button betButton;
+    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Button button_home;
     }
 }

@@ -7,6 +7,7 @@ namespace AwesomePokerGameSln {
         // create the form
         public FrmTitle() {
             InitializeComponent();
+            Console.WriteLine("Amount of stars - " + Stars.Amount);
         }
     
         // exit button
@@ -31,17 +32,19 @@ namespace AwesomePokerGameSln {
         // start the game button
         private void newGameButtonClick(object sender, EventArgs e) {
             // start the actual game form and hide this title form
-            FrmPlaygame frmPlaygame = new FrmPlaygame();
-            frmPlaygame.Show();
             Hide();
+            FrmPlaygame frmPlaygame = new FrmPlaygame();
+            frmPlaygame.ShowDialog();
+            Close();
         }
 
         private void settingsButtonClick(object sender, EventArgs e)
         {
             // open settings page
-            FrmSettings frmSettings = new FrmSettings();
-            frmSettings.Show();
             Hide();
+            FrmSettings frmSettings = new FrmSettings();
+            frmSettings.ShowDialog();
+            Close();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

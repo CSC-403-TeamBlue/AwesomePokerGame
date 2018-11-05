@@ -48,7 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Stars.cs" />
     <Compile Include="Code\CardImageHelper.cs" />
+    <Compile Include="FormBet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBet.Designer.cs">
+      <DependentUpon>FormBet.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmChangeTheme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +82,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBet.resx">
+      <DependentUpon>FormBet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmChangeTheme.resx">
       <DependentUpon>FrmChangeTheme.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +336,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ninja_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\locked_back.png" />
+    <Content Include="Resources\star.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
