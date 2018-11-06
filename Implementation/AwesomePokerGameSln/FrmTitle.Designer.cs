@@ -42,22 +42,27 @@
             this.deck_ninja = new System.Windows.Forms.Button();
             this.button_back_to_settings = new System.Windows.Forms.Button();
             this.changeThemePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.star_count = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_rulebook)).BeginInit();
             this.mainMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_rulebook)).BeginInit();
             this.settingsPanel.SuspendLayout();
             this.changeThemePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_title
             // 
             this.label_title.AutoSize = true;
             this.label_title.BackColor = System.Drawing.Color.Transparent;
-            this.label_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_title.Font = new System.Drawing.Font("Comic Sans MS", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_title.ForeColor = System.Drawing.Color.Yellow;
-            this.label_title.Location = new System.Drawing.Point(-2, -18);
+            this.label_title.Location = new System.Drawing.Point(-1, -54);
             this.label_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(708, 163);
+            this.label_title.Size = new System.Drawing.Size(588, 168);
             this.label_title.TabIndex = 0;
             this.label_title.Text = "Awesome";
             // 
@@ -65,14 +70,28 @@
             // 
             this.label_title2.AutoSize = true;
             this.label_title2.BackColor = System.Drawing.Color.Transparent;
-            this.label_title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_title2.Font = new System.Drawing.Font("Comic Sans MS", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_title2.ForeColor = System.Drawing.Color.Yellow;
-            this.label_title2.Location = new System.Drawing.Point(82, 218);
+            this.label_title2.Location = new System.Drawing.Point(73, 174);
             this.label_title2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_title2.Name = "label_title2";
-            this.label_title2.Size = new System.Drawing.Size(465, 163);
+            this.label_title2.Size = new System.Drawing.Size(379, 168);
             this.label_title2.TabIndex = 4;
             this.label_title2.Text = "Game";
+            // 
+            // picture_rulebook
+            // 
+            this.picture_rulebook.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.rule_book;
+            this.picture_rulebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainMenuPanel.SetColumnSpan(this.picture_rulebook, 2);
+            this.picture_rulebook.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.picture_rulebook.Location = new System.Drawing.Point(289, 4);
+            this.picture_rulebook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picture_rulebook.Name = "picture_rulebook";
+            this.picture_rulebook.Size = new System.Drawing.Size(562, 78);
+            this.picture_rulebook.TabIndex = 5;
+            this.picture_rulebook.TabStop = false;
+            this.picture_rulebook.Visible = false;
             // 
             // mainMenuPanel
             // 
@@ -89,13 +108,14 @@
             this.mainMenuPanel.Controls.Add(this.button_quit, 3, 1);
             this.mainMenuPanel.Controls.Add(this.picture_rulebook, 1, 0);
             this.mainMenuPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mainMenuPanel.Location = new System.Drawing.Point(0, 533);
+            this.mainMenuPanel.Location = new System.Drawing.Point(0, 357);
+            this.mainMenuPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.RowCount = 2;
             this.mainMenuPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.mainMenuPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
-            this.mainMenuPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.mainMenuPanel.Size = new System.Drawing.Size(1284, 169);
+            this.mainMenuPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.mainMenuPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.mainMenuPanel.Size = new System.Drawing.Size(1141, 205);
             this.mainMenuPanel.TabIndex = 8;
             // 
             // button_new_game
@@ -104,11 +124,11 @@
             this.button_new_game.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_new_game.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_new_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_new_game.Location = new System.Drawing.Point(4, 25);
-            this.button_new_game.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_new_game.Location = new System.Drawing.Point(4, 90);
+            this.button_new_game.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_new_game.Name = "button_new_game";
-            this.button_new_game.Padding = new System.Windows.Forms.Padding(6);
-            this.button_new_game.Size = new System.Drawing.Size(313, 139);
+            this.button_new_game.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button_new_game.Size = new System.Drawing.Size(277, 111);
             this.button_new_game.TabIndex = 1;
             this.button_new_game.Text = "New Game";
             this.button_new_game.UseVisualStyleBackColor = false;
@@ -120,11 +140,11 @@
             this.button_rulebook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button_rulebook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_rulebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_rulebook.Location = new System.Drawing.Point(325, 25);
-            this.button_rulebook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_rulebook.Location = new System.Drawing.Point(289, 90);
+            this.button_rulebook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_rulebook.Name = "button_rulebook";
-            this.button_rulebook.Padding = new System.Windows.Forms.Padding(6);
-            this.button_rulebook.Size = new System.Drawing.Size(313, 139);
+            this.button_rulebook.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button_rulebook.Size = new System.Drawing.Size(277, 111);
             this.button_rulebook.TabIndex = 2;
             this.button_rulebook.Text = "View Rule Book";
             this.button_rulebook.UseVisualStyleBackColor = false;
@@ -136,10 +156,11 @@
             this.button_setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button_setting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_setting.Location = new System.Drawing.Point(645, 23);
+            this.button_setting.Location = new System.Drawing.Point(573, 88);
+            this.button_setting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_setting.Name = "button_setting";
-            this.button_setting.Padding = new System.Windows.Forms.Padding(6);
-            this.button_setting.Size = new System.Drawing.Size(315, 143);
+            this.button_setting.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button_setting.Size = new System.Drawing.Size(279, 115);
             this.button_setting.TabIndex = 6;
             this.button_setting.Text = "Settings";
             this.button_setting.UseVisualStyleBackColor = false;
@@ -151,11 +172,11 @@
             this.button_quit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button_quit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_quit.Location = new System.Drawing.Point(967, 25);
-            this.button_quit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_quit.Location = new System.Drawing.Point(859, 90);
+            this.button_quit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_quit.Name = "button_quit";
-            this.button_quit.Padding = new System.Windows.Forms.Padding(6);
-            this.button_quit.Size = new System.Drawing.Size(313, 139);
+            this.button_quit.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button_quit.Size = new System.Drawing.Size(278, 111);
             this.button_quit.TabIndex = 3;
             this.button_quit.Text = "Quit Game";
             this.button_quit.UseVisualStyleBackColor = false;
@@ -187,12 +208,13 @@
             this.settingsPanel.Controls.Add(this.button_back, 2, 0);
             this.settingsPanel.Controls.Add(this.button_change_theme, 1, 0);
             this.settingsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.settingsPanel.Location = new System.Drawing.Point(0, 383);
+            this.settingsPanel.Location = new System.Drawing.Point(0, 237);
+            this.settingsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.settingsPanel.Name = "settingsPanel";
             this.settingsPanel.RowCount = 1;
-            this.settingsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.settingsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.settingsPanel.Size = new System.Drawing.Size(1284, 150);
+            this.settingsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.settingsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.settingsPanel.Size = new System.Drawing.Size(1141, 120);
             this.settingsPanel.TabIndex = 9;
             // 
             // button_fullscreen
@@ -200,10 +222,11 @@
             this.button_fullscreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_fullscreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_fullscreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_fullscreen.Location = new System.Drawing.Point(3, 3);
+            this.button_fullscreen.Location = new System.Drawing.Point(3, 2);
+            this.button_fullscreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_fullscreen.Name = "button_fullscreen";
-            this.button_fullscreen.Padding = new System.Windows.Forms.Padding(6);
-            this.button_fullscreen.Size = new System.Drawing.Size(421, 144);
+            this.button_fullscreen.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button_fullscreen.Size = new System.Drawing.Size(374, 116);
             this.button_fullscreen.TabIndex = 0;
             this.button_fullscreen.Text = "Toggle Fullscreen";
             this.button_fullscreen.UseVisualStyleBackColor = false;
@@ -214,10 +237,11 @@
             this.button_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button_back.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_back.Location = new System.Drawing.Point(858, 3);
+            this.button_back.Location = new System.Drawing.Point(763, 2);
+            this.button_back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_back.Name = "button_back";
-            this.button_back.Padding = new System.Windows.Forms.Padding(6);
-            this.button_back.Size = new System.Drawing.Size(423, 144);
+            this.button_back.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button_back.Size = new System.Drawing.Size(375, 116);
             this.button_back.TabIndex = 2;
             this.button_back.Text = "Back";
             this.button_back.UseVisualStyleBackColor = false;
@@ -228,10 +252,11 @@
             this.button_change_theme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button_change_theme.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_change_theme.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_change_theme.Location = new System.Drawing.Point(430, 3);
+            this.button_change_theme.Location = new System.Drawing.Point(383, 2);
+            this.button_change_theme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_change_theme.Name = "button_change_theme";
-            this.button_change_theme.Padding = new System.Windows.Forms.Padding(6);
-            this.button_change_theme.Size = new System.Drawing.Size(422, 144);
+            this.button_change_theme.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button_change_theme.Size = new System.Drawing.Size(374, 116);
             this.button_change_theme.TabIndex = 1;
             this.button_change_theme.Text = "Change Theme";
             this.button_change_theme.UseVisualStyleBackColor = false;
@@ -341,21 +366,59 @@
             this.changeThemePanel.Size = new System.Drawing.Size(1284, 422);
             this.changeThemePanel.TabIndex = 12;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.star;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(859, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(76, 73);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // star_count
+            // 
+            this.star_count.AutoSize = true;
+            this.star_count.BackColor = System.Drawing.Color.Transparent;
+            this.star_count.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.star_count.ForeColor = System.Drawing.Color.Yellow;
+            this.star_count.Location = new System.Drawing.Point(941, 57);
+            this.star_count.Name = "star_count";
+            this.star_count.Size = new System.Drawing.Size(69, 29);
+            this.star_count.TabIndex = 11;
+            this.star_count.Text = "label1";
+            this.star_count.Click += new System.EventHandler(this.star_count_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(941, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 35);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "S T A R S";
+            // 
             // FrmTitle
             // 
             this.AccessibleDescription = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.title_screen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1284, 702);
-            this.Controls.Add(this.changeThemePanel);
+            this.ClientSize = new System.Drawing.Size(1141, 562);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.star_count);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.settingsPanel);
             this.Controls.Add(this.mainMenuPanel);
             this.Controls.Add(this.label_title2);
             this.Controls.Add(this.label_title);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmTitle";
             this.Text = "Awesome Poker Game";
             this.mainMenuPanel.ResumeLayout(false);
@@ -364,6 +427,7 @@
             this.settingsPanel.ResumeLayout(false);
             this.changeThemePanel.ResumeLayout(false);
             this.changeThemePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,6 +455,9 @@
         private System.Windows.Forms.Button deck_ninja;
         private System.Windows.Forms.Button button_back_to_settings;
         private System.Windows.Forms.TableLayoutPanel changeThemePanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label star_count;
+        private System.Windows.Forms.Label label1;
     }
 }
 

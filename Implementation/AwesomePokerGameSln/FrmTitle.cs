@@ -10,6 +10,7 @@ namespace AwesomePokerGameSln {
             settingsPanel.Visible = false;
             changeThemePanel.Visible = false;
             Console.WriteLine("Amount of stars - " + Stars.Amount);
+            star_count.Text = Stars.Amount.ToString();
         }
     
         // exit button
@@ -109,6 +110,11 @@ namespace AwesomePokerGameSln {
         }
 
         private void deck_canada_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void star_count_Click(object sender, EventArgs e)
         {
 
         }
