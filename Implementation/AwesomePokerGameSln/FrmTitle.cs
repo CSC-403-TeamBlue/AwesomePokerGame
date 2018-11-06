@@ -7,6 +7,8 @@ namespace AwesomePokerGameSln {
         // create the form
         public FrmTitle() {
             InitializeComponent();
+            settingsPanel.Visible = false;
+            //cardBackPanel.Visible = false;
             Console.WriteLine("Amount of stars - " + Stars.Amount);
         }
     
@@ -38,18 +40,45 @@ namespace AwesomePokerGameSln {
             Close();
         }
 
+        // view the settings page
         private void settingsButtonClick(object sender, EventArgs e)
         {
-            // open settings page
-            Hide();
-            FrmSettings frmSettings = new FrmSettings();
-            frmSettings.ShowDialog();
-            Close();
+            // hide main menu buttons and show settings buttons
+            mainMenuPanel.Visible = false;
+            settingsPanel.Visible = true;
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        // toggle fullscreen
+        private void button_fullscreen_Click(object sender, EventArgs e)
         {
+            // fullscreen
+            if (WindowState != FormWindowState.Maximized)
+            {
+                FormBorderStyle = FormBorderStyle.None;
+                WindowState = FormWindowState.Maximized;
+            }
+            // window
+            else
+            {
+                FormBorderStyle = FormBorderStyle.Sizable;
+                WindowState = FormWindowState.Normal;
+            }
+        }
 
+        // view change theme page
+        private void button_change_theme_Click(object sender, EventArgs e)
+        {
+            // hide settings buttons and show change theme buttons
+            //settingsPanel.Visible = false;
+            //cardBackPanel.Visible = true;
+        }
+
+        // go back to main menu
+        private void button_back_Click(object sender, EventArgs e)
+        {
+            // hide settings buttons and show menu buttons
+            settingsPanel.Visible = false;
+            mainMenuPanel.Visible = true;
         }
     }
 }
