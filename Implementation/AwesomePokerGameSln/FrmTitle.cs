@@ -8,7 +8,7 @@ namespace AwesomePokerGameSln {
         public FrmTitle() {
             InitializeComponent();
             settingsPanel.Visible = false;
-            //cardBackPanel.Visible = false;
+            changeThemePanel.Visible = false;
             Console.WriteLine("Amount of stars - " + Stars.Amount);
         }
     
@@ -69,8 +69,8 @@ namespace AwesomePokerGameSln {
         private void button_change_theme_Click(object sender, EventArgs e)
         {
             // hide settings buttons and show change theme buttons
-            //settingsPanel.Visible = false;
-            //cardBackPanel.Visible = true;
+            settingsPanel.Visible = false;
+            changeThemePanel.Visible = true;
         }
 
         // go back to main menu
@@ -79,6 +79,38 @@ namespace AwesomePokerGameSln {
             // hide settings buttons and show menu buttons
             settingsPanel.Visible = false;
             mainMenuPanel.Visible = true;
+        }
+
+        private void button_back_to_settings_Click(object sender, EventArgs e)
+        {
+            // hide change theme buttons and show menu buttons
+            changeThemePanel.Visible = false;
+            settingsPanel.Visible = true;
+        }
+
+        private void deck_halloween_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deck_ninja_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deck_waluigi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deck_george_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deck_canada_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

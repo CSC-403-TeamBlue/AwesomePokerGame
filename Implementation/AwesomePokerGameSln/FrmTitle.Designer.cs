@@ -25,19 +25,27 @@
     private void InitializeComponent() {
             this.label_title = new System.Windows.Forms.Label();
             this.label_title2 = new System.Windows.Forms.Label();
-            this.picture_rulebook = new System.Windows.Forms.PictureBox();
             this.mainMenuPanel = new System.Windows.Forms.TableLayoutPanel();
             this.button_new_game = new System.Windows.Forms.Button();
             this.button_rulebook = new System.Windows.Forms.Button();
             this.button_setting = new System.Windows.Forms.Button();
             this.button_quit = new System.Windows.Forms.Button();
+            this.picture_rulebook = new System.Windows.Forms.PictureBox();
             this.settingsPanel = new System.Windows.Forms.TableLayoutPanel();
             this.button_fullscreen = new System.Windows.Forms.Button();
             this.button_back = new System.Windows.Forms.Button();
             this.button_change_theme = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_rulebook)).BeginInit();
+            this.deck_halloween = new System.Windows.Forms.Button();
+            this.deck_canada = new System.Windows.Forms.Button();
+            this.deck_george = new System.Windows.Forms.Button();
+            this.deck_waluigi = new System.Windows.Forms.Button();
+            this.deck_ninja = new System.Windows.Forms.Button();
+            this.button_back_to_settings = new System.Windows.Forms.Button();
+            this.changeThemePanel = new System.Windows.Forms.TableLayoutPanel();
             this.mainMenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_rulebook)).BeginInit();
             this.settingsPanel.SuspendLayout();
+            this.changeThemePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_title
@@ -66,20 +74,6 @@
             this.label_title2.TabIndex = 4;
             this.label_title2.Text = "Game";
             // 
-            // picture_rulebook
-            // 
-            this.picture_rulebook.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.rule_book;
-            this.picture_rulebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mainMenuPanel.SetColumnSpan(this.picture_rulebook, 2);
-            this.picture_rulebook.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.picture_rulebook.Location = new System.Drawing.Point(325, 5);
-            this.picture_rulebook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.picture_rulebook.Name = "picture_rulebook";
-            this.picture_rulebook.Size = new System.Drawing.Size(634, 478);
-            this.picture_rulebook.TabIndex = 5;
-            this.picture_rulebook.TabStop = false;
-            this.picture_rulebook.Visible = false;
-            // 
             // mainMenuPanel
             // 
             this.mainMenuPanel.AutoSize = true;
@@ -95,13 +89,13 @@
             this.mainMenuPanel.Controls.Add(this.button_quit, 3, 1);
             this.mainMenuPanel.Controls.Add(this.picture_rulebook, 1, 0);
             this.mainMenuPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mainMenuPanel.Location = new System.Drawing.Point(0, 65);
+            this.mainMenuPanel.Location = new System.Drawing.Point(0, 533);
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.RowCount = 2;
             this.mainMenuPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.mainMenuPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.mainMenuPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.mainMenuPanel.Size = new System.Drawing.Size(1284, 637);
+            this.mainMenuPanel.Size = new System.Drawing.Size(1284, 169);
             this.mainMenuPanel.TabIndex = 8;
             // 
             // button_new_game
@@ -110,7 +104,7 @@
             this.button_new_game.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_new_game.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_new_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_new_game.Location = new System.Drawing.Point(4, 493);
+            this.button_new_game.Location = new System.Drawing.Point(4, 25);
             this.button_new_game.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_new_game.Name = "button_new_game";
             this.button_new_game.Padding = new System.Windows.Forms.Padding(6);
@@ -126,7 +120,7 @@
             this.button_rulebook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button_rulebook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_rulebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_rulebook.Location = new System.Drawing.Point(325, 493);
+            this.button_rulebook.Location = new System.Drawing.Point(325, 25);
             this.button_rulebook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_rulebook.Name = "button_rulebook";
             this.button_rulebook.Padding = new System.Windows.Forms.Padding(6);
@@ -142,7 +136,7 @@
             this.button_setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button_setting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_setting.Location = new System.Drawing.Point(645, 491);
+            this.button_setting.Location = new System.Drawing.Point(645, 23);
             this.button_setting.Name = "button_setting";
             this.button_setting.Padding = new System.Windows.Forms.Padding(6);
             this.button_setting.Size = new System.Drawing.Size(315, 143);
@@ -157,7 +151,7 @@
             this.button_quit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button_quit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_quit.Location = new System.Drawing.Point(967, 493);
+            this.button_quit.Location = new System.Drawing.Point(967, 25);
             this.button_quit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_quit.Name = "button_quit";
             this.button_quit.Padding = new System.Windows.Forms.Padding(6);
@@ -166,6 +160,20 @@
             this.button_quit.Text = "Quit Game";
             this.button_quit.UseVisualStyleBackColor = false;
             this.button_quit.Click += new System.EventHandler(this.quitButtonClick);
+            // 
+            // picture_rulebook
+            // 
+            this.picture_rulebook.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.rule_book;
+            this.picture_rulebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainMenuPanel.SetColumnSpan(this.picture_rulebook, 2);
+            this.picture_rulebook.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.picture_rulebook.Location = new System.Drawing.Point(325, 5);
+            this.picture_rulebook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picture_rulebook.Name = "picture_rulebook";
+            this.picture_rulebook.Size = new System.Drawing.Size(634, 10);
+            this.picture_rulebook.TabIndex = 5;
+            this.picture_rulebook.TabStop = false;
+            this.picture_rulebook.Visible = false;
             // 
             // settingsPanel
             // 
@@ -179,11 +187,11 @@
             this.settingsPanel.Controls.Add(this.button_back, 2, 0);
             this.settingsPanel.Controls.Add(this.button_change_theme, 1, 0);
             this.settingsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.settingsPanel.Location = new System.Drawing.Point(0, -85);
+            this.settingsPanel.Location = new System.Drawing.Point(0, 383);
             this.settingsPanel.Name = "settingsPanel";
             this.settingsPanel.RowCount = 1;
             this.settingsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.settingsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.settingsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.settingsPanel.Size = new System.Drawing.Size(1284, 150);
             this.settingsPanel.TabIndex = 9;
             // 
@@ -229,6 +237,110 @@
             this.button_change_theme.UseVisualStyleBackColor = false;
             this.button_change_theme.Click += new System.EventHandler(this.button_change_theme_Click);
             // 
+            // deck_halloween
+            // 
+            this.deck_halloween.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.deck_halloween.AutoSize = true;
+            this.deck_halloween.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.halloween_back;
+            this.deck_halloween.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deck_halloween.Location = new System.Drawing.Point(3, 3);
+            this.deck_halloween.Name = "deck_halloween";
+            this.deck_halloween.Size = new System.Drawing.Size(189, 252);
+            this.deck_halloween.TabIndex = 0;
+            this.deck_halloween.UseVisualStyleBackColor = true;
+            this.deck_halloween.Click += new System.EventHandler(this.deck_halloween_Click);
+            // 
+            // deck_canada
+            // 
+            this.deck_canada.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.deck_canada.AutoSize = true;
+            this.deck_canada.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.canada_back;
+            this.deck_canada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deck_canada.Location = new System.Drawing.Point(1027, 3);
+            this.deck_canada.Name = "deck_canada";
+            this.deck_canada.Size = new System.Drawing.Size(189, 252);
+            this.deck_canada.TabIndex = 4;
+            this.deck_canada.UseVisualStyleBackColor = true;
+            this.deck_canada.Click += new System.EventHandler(this.deck_canada_Click);
+            // 
+            // deck_george
+            // 
+            this.deck_george.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.deck_george.AutoSize = true;
+            this.deck_george.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.washington_back;
+            this.deck_george.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deck_george.Location = new System.Drawing.Point(771, 3);
+            this.deck_george.Name = "deck_george";
+            this.deck_george.Size = new System.Drawing.Size(189, 252);
+            this.deck_george.TabIndex = 3;
+            this.deck_george.UseVisualStyleBackColor = true;
+            this.deck_george.Click += new System.EventHandler(this.deck_george_Click);
+            // 
+            // deck_waluigi
+            // 
+            this.deck_waluigi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.deck_waluigi.AutoSize = true;
+            this.deck_waluigi.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.waluigi_back;
+            this.deck_waluigi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deck_waluigi.Location = new System.Drawing.Point(515, 3);
+            this.deck_waluigi.Name = "deck_waluigi";
+            this.deck_waluigi.Size = new System.Drawing.Size(189, 252);
+            this.deck_waluigi.TabIndex = 2;
+            this.deck_waluigi.UseVisualStyleBackColor = true;
+            this.deck_waluigi.Click += new System.EventHandler(this.deck_waluigi_Click);
+            // 
+            // deck_ninja
+            // 
+            this.deck_ninja.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.deck_ninja.AutoSize = true;
+            this.deck_ninja.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.ninja_back;
+            this.deck_ninja.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deck_ninja.Location = new System.Drawing.Point(259, 3);
+            this.deck_ninja.Name = "deck_ninja";
+            this.deck_ninja.Size = new System.Drawing.Size(189, 252);
+            this.deck_ninja.TabIndex = 1;
+            this.deck_ninja.UseVisualStyleBackColor = true;
+            this.deck_ninja.Click += new System.EventHandler(this.deck_ninja_Click);
+            // 
+            // button_back_to_settings
+            // 
+            this.button_back_to_settings.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_back_to_settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.changeThemePanel.SetColumnSpan(this.button_back_to_settings, 3);
+            this.button_back_to_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_back_to_settings.Location = new System.Drawing.Point(3, 333);
+            this.button_back_to_settings.MaximumSize = new System.Drawing.Size(423, 144);
+            this.button_back_to_settings.Name = "button_back_to_settings";
+            this.button_back_to_settings.Size = new System.Drawing.Size(423, 144);
+            this.button_back_to_settings.TabIndex = 11;
+            this.button_back_to_settings.Text = "Back";
+            this.button_back_to_settings.UseVisualStyleBackColor = false;
+            this.button_back_to_settings.Click += new System.EventHandler(this.button_back_to_settings_Click);
+            // 
+            // changeThemePanel
+            // 
+            this.changeThemePanel.AutoSize = true;
+            this.changeThemePanel.BackColor = System.Drawing.Color.Transparent;
+            this.changeThemePanel.ColumnCount = 5;
+            this.changeThemePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.changeThemePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.changeThemePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.changeThemePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.changeThemePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.changeThemePanel.Controls.Add(this.deck_canada, 4, 0);
+            this.changeThemePanel.Controls.Add(this.deck_halloween, 0, 0);
+            this.changeThemePanel.Controls.Add(this.deck_george, 3, 0);
+            this.changeThemePanel.Controls.Add(this.deck_waluigi, 2, 0);
+            this.changeThemePanel.Controls.Add(this.deck_ninja, 1, 0);
+            this.changeThemePanel.Controls.Add(this.button_back_to_settings, 1, 2);
+            this.changeThemePanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.changeThemePanel.Location = new System.Drawing.Point(0, -39);
+            this.changeThemePanel.Name = "changeThemePanel";
+            this.changeThemePanel.RowCount = 2;
+            this.changeThemePanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.changeThemePanel.Size = new System.Drawing.Size(1284, 422);
+            this.changeThemePanel.TabIndex = 12;
+            // 
             // FrmTitle
             // 
             this.AccessibleDescription = "";
@@ -238,6 +350,7 @@
             this.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.title_screen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 702);
+            this.Controls.Add(this.changeThemePanel);
             this.Controls.Add(this.settingsPanel);
             this.Controls.Add(this.mainMenuPanel);
             this.Controls.Add(this.label_title2);
@@ -245,10 +358,12 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmTitle";
             this.Text = "Awesome Poker Game";
-            ((System.ComponentModel.ISupportInitialize)(this.picture_rulebook)).EndInit();
             this.mainMenuPanel.ResumeLayout(false);
             this.mainMenuPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_rulebook)).EndInit();
             this.settingsPanel.ResumeLayout(false);
+            this.changeThemePanel.ResumeLayout(false);
+            this.changeThemePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,7 +374,6 @@
     private System.Windows.Forms.Label label_title;
     private System.Windows.Forms.Button button_settings;
     private System.Windows.Forms.Label label_title2;
-    private System.Windows.Forms.PictureBox picture_rulebook;
         private System.Windows.Forms.TableLayoutPanel mainMenuPanel;
         private System.Windows.Forms.Button button_quit;
         private System.Windows.Forms.Button button_rulebook;
@@ -269,6 +383,14 @@
         private System.Windows.Forms.Button button_fullscreen;
         private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.Button button_change_theme;
+        private System.Windows.Forms.PictureBox picture_rulebook;
+        private System.Windows.Forms.Button deck_halloween;
+        private System.Windows.Forms.Button deck_canada;
+        private System.Windows.Forms.Button deck_george;
+        private System.Windows.Forms.Button deck_waluigi;
+        private System.Windows.Forms.Button deck_ninja;
+        private System.Windows.Forms.Button button_back_to_settings;
+        private System.Windows.Forms.TableLayoutPanel changeThemePanel;
     }
 }
 
