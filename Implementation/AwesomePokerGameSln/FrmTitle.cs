@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace AwesomePokerGameSln {
     public partial class FrmTitle : Form {
+
         // create the form
         public FrmTitle() {
             InitializeComponent();
@@ -98,26 +99,94 @@ namespace AwesomePokerGameSln {
 
         private void deck_ninja_Click(object sender, EventArgs e)
         {
-            CardBack.Kind = CardBack.BackType.NINJA;
-            MessageBox.Show("Theme changed to Ninja", "Theme Change", MessageBoxButtons.OK);
+            if (!CardBack.ninjaLock)
+            {
+                if (Stars.Amount >= 10)
+                {
+                    Stars.Amount -= 10;
+                    CardBack.Kind = CardBack.BackType.NINJA;
+                    MessageBox.Show("Theme changed to Ninja", "Theme Change", MessageBoxButtons.OK);
+                    CardBack.ninjaLock = true;
+                }
+                else
+                {
+                    MessageBox.Show("Insufficient stars", "Unable to Unlock", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                CardBack.Kind = CardBack.BackType.NINJA;
+                MessageBox.Show("Theme changed to Ninja", "Theme Change", MessageBoxButtons.OK);
+            }
         }
 
         private void deck_waluigi_Click(object sender, EventArgs e)
         {
-            CardBack.Kind = CardBack.BackType.WALUIGI;
-            MessageBox.Show("Theme changed to Waluigi", "Theme Change", MessageBoxButtons.OK);
+            if (!CardBack.waluigiLock)
+            {
+                if (Stars.Amount >= 10)
+                {
+                    Stars.Amount -= 10;
+                    CardBack.Kind = CardBack.BackType.WALUIGI;
+                    MessageBox.Show("Theme changed to Waluigi", "Theme Change", MessageBoxButtons.OK);
+                    CardBack.waluigiLock = true;
+                }
+                else
+                {
+                    MessageBox.Show("Insufficient stars", "Unable to Unlock", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                CardBack.Kind = CardBack.BackType.WALUIGI;
+                MessageBox.Show("Theme changed to Waluigi", "Theme Change", MessageBoxButtons.OK);
+            }
         }
 
         private void deck_george_Click(object sender, EventArgs e)
         {
-            CardBack.Kind = CardBack.BackType.GEORGE;
-            MessageBox.Show("Theme changed to George Washington", "Theme Change", MessageBoxButtons.OK);
+            if (!CardBack.georgeLock)
+            {
+                if (Stars.Amount >= 10)
+                {
+                    Stars.Amount -= 10;
+                    CardBack.Kind = CardBack.BackType.GEORGE;
+                    MessageBox.Show("Theme changed to George Washington", "Theme Change", MessageBoxButtons.OK);
+                    CardBack.georgeLock = true;
+                }
+                else
+                {
+                    MessageBox.Show("Insufficient stars", "Unable to Unlock", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                CardBack.Kind = CardBack.BackType.GEORGE;
+                MessageBox.Show("Theme changed to George Washington", "Theme Change", MessageBoxButtons.OK);
+            }
         }
 
         private void deck_canada_Click(object sender, EventArgs e)
         {
-            CardBack.Kind = CardBack.BackType.CANADA;
-            MessageBox.Show("Theme changed to Canada", "Theme Change", MessageBoxButtons.OK);
+            if (!CardBack.canadaLock)
+            {
+                if (Stars.Amount >= 10)
+                {
+                    Stars.Amount -= 10;
+                    CardBack.Kind = CardBack.BackType.CANADA;
+                    MessageBox.Show("Theme changed to Canada", "Theme Change", MessageBoxButtons.OK);
+                    CardBack.canadaLock = true;
+                }
+                else
+                {
+                    MessageBox.Show("Insufficient stars", "Unable to Unlock", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                CardBack.Kind = CardBack.BackType.CANADA;
+                MessageBox.Show("Theme changed to Canada", "Theme Change", MessageBoxButtons.OK);
+            }
         }
 
         private void star_count_Click(object sender, EventArgs e)

@@ -19,6 +19,11 @@ namespace AwesomePokerGameSln
 
         private static BackType _kind = BackType.HALLOWEEN;
 
+        public static Boolean ninjaLock = false;
+        public static Boolean waluigiLock = false;
+        public static Boolean georgeLock = false;
+        public static Boolean canadaLock = false;
+
         public static BackType Kind
         {
             get { return _kind; }
