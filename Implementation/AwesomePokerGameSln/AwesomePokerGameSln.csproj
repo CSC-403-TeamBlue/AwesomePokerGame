@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardBack.cs" />
     <Compile Include="Stars.cs" />
     <Compile Include="Code\CardImageHelper.cs" />
     <Compile Include="FormBet.cs">

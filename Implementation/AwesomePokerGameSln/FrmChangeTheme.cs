@@ -28,27 +28,32 @@ namespace AwesomePokerGameSln
 
         private void deck_halloween_Click(object sender, EventArgs e)
         {
-
+            CardBack.Kind = CardBack.BackType.HALLOWEEN;
+            MessageBox.Show("Theme changed to Halloween", "Theme Change", MessageBoxButtons.OK);
         }
 
         private void deck_ninja_Click(object sender, EventArgs e)
         {
-
+            CardBack.Kind = CardBack.BackType.NINJA;
+            MessageBox.Show("Theme changed to Ninja", "Theme Change", MessageBoxButtons.OK);
         }
 
         private void deck_waluigi_Click(object sender, EventArgs e)
         {
-
+            CardBack.Kind = CardBack.BackType.WALUIGI;
+            MessageBox.Show("Theme changed to Waluigi", "Theme Change", MessageBoxButtons.OK);
         }
 
         private void deck_george_Click(object sender, EventArgs e)
         {
-
+            CardBack.Kind = CardBack.BackType.GEORGE;
+            MessageBox.Show("Theme changed to George Washington", "Theme Change", MessageBoxButtons.OK);
         }
 
         private void deck_canada_Click(object sender, EventArgs e)
         {
-
+            CardBack.Kind = CardBack.BackType.CANADA;
+            MessageBox.Show("Theme changed to Canada", "Theme Change", MessageBoxButtons.OK);
         }
     }
 }

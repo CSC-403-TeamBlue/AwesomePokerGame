@@ -84,7 +84,36 @@ namespace AwesomePokerGameSln {
             foreach (PictureBox dealerCardPic in dealerCardPics) {
                 CardType card = deck.nextCard();
                 cards[index++] = card;
-                dealerCardPic.BackgroundImage = CardImageHelper.getResource("halloween_back");
+
+                // change the dealer's card back depending on the theme selected from settings
+                switch(CardBack.Kind)
+                {
+                    case (CardBack.BackType.HALLOWEEN):
+                        {
+                            dealerCardPic.BackgroundImage = CardImageHelper.getResource("halloween_back");
+                        }
+                        break;
+                    case (CardBack.BackType.NINJA):
+                        {
+                            dealerCardPic.BackgroundImage = CardImageHelper.getResource("ninja_back");
+                        }
+                        break;
+                    case (CardBack.BackType.WALUIGI):
+                        {
+                            dealerCardPic.BackgroundImage = CardImageHelper.getResource("waluigi_back");
+                        }
+                        break;
+                    case (CardBack.BackType.GEORGE):
+                        {
+                            dealerCardPic.BackgroundImage = CardImageHelper.getResource("washington_back");
+                        }
+                        break;
+                    case (CardBack.BackType.CANADA):
+                        {
+                            dealerCardPic.BackgroundImage = CardImageHelper.getResource("canada_back");
+                        }
+                        break;
+                }
             }
 
             // set those cards as the dealer's hand and then determine the best combination of cards in the
