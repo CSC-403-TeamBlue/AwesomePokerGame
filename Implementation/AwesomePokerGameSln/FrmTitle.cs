@@ -10,6 +10,7 @@ namespace AwesomePokerGameSln {
             settingsPanel.Visible = false;
             //cardBackPanel.Visible = false;
             Console.WriteLine("Amount of stars - " + Stars.Amount);
+            star_count.Text = Stars.Amount.ToString();
         }
     
         // exit button
@@ -79,6 +80,11 @@ namespace AwesomePokerGameSln {
             // hide settings buttons and show menu buttons
             settingsPanel.Visible = false;
             mainMenuPanel.Visible = true;
+        }
+
+        private void star_count_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
