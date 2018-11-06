@@ -7,7 +7,10 @@ namespace AwesomePokerGameSln {
         // create the form
         public FrmTitle() {
             InitializeComponent();
+            settingsPanel.Visible = false;
+            changeThemePanel.Visible = false;
             Console.WriteLine("Amount of stars - " + Stars.Amount);
+            star_count.Text = Stars.Amount.ToString();
         }
     
         // exit button
@@ -38,13 +41,88 @@ namespace AwesomePokerGameSln {
             Close();
         }
 
+        // view the settings page
         private void settingsButtonClick(object sender, EventArgs e)
         {
-            // open settings page
-            Hide();
-            FrmSettings frmSettings = new FrmSettings();
-            frmSettings.ShowDialog();
-            Close();
+            // hide main menu buttons and show settings buttons
+            mainMenuPanel.Visible = false;
+            settingsPanel.Visible = true;
+        }
+
+        // toggle fullscreen
+        private void button_fullscreen_Click(object sender, EventArgs e)
+        {
+            // fullscreen
+            if (WindowState != FormWindowState.Maximized)
+            {
+                FormBorderStyle = FormBorderStyle.None;
+                WindowState = FormWindowState.Maximized;
+            }
+            // window
+            else
+            {
+                FormBorderStyle = FormBorderStyle.Sizable;
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        // view change theme page
+        private void button_change_theme_Click(object sender, EventArgs e)
+        {
+            // hide settings buttons and show change theme buttons
+            settingsPanel.Visible = false;
+            changeThemePanel.Visible = true;
+        }
+
+        // go back to main menu
+        private void button_back_Click(object sender, EventArgs e)
+        {
+            // hide settings buttons and show menu buttons
+            settingsPanel.Visible = false;
+            mainMenuPanel.Visible = true;
+        }
+
+        private void button_back_to_settings_Click(object sender, EventArgs e)
+        {
+            // hide change theme buttons and show menu buttons
+            changeThemePanel.Visible = false;
+            settingsPanel.Visible = true;
+        }
+
+        // card back buttons
+        private void deck_halloween_Click(object sender, EventArgs e)
+        {
+            CardBack.Kind = CardBack.BackType.HALLOWEEN;
+            MessageBox.Show("Theme changed to Halloween", "Theme Change", MessageBoxButtons.OK);
+        }
+
+        private void deck_ninja_Click(object sender, EventArgs e)
+        {
+            CardBack.Kind = CardBack.BackType.NINJA;
+            MessageBox.Show("Theme changed to Ninja", "Theme Change", MessageBoxButtons.OK);
+        }
+
+        private void deck_waluigi_Click(object sender, EventArgs e)
+        {
+            CardBack.Kind = CardBack.BackType.WALUIGI;
+            MessageBox.Show("Theme changed to Waluigi", "Theme Change", MessageBoxButtons.OK);
+        }
+
+        private void deck_george_Click(object sender, EventArgs e)
+        {
+            CardBack.Kind = CardBack.BackType.GEORGE;
+            MessageBox.Show("Theme changed to George Washington", "Theme Change", MessageBoxButtons.OK);
+        }
+
+        private void deck_canada_Click(object sender, EventArgs e)
+        {
+            CardBack.Kind = CardBack.BackType.CANADA;
+            MessageBox.Show("Theme changed to Canada", "Theme Change", MessageBoxButtons.OK);
+        }
+
+        private void star_count_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(":O", "!!!", MessageBoxButtons.OK);
         }
     }
 }

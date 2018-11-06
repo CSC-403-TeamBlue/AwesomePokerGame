@@ -23,18 +23,8 @@
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
-            this.picCard1 = new System.Windows.Forms.PictureBox();
-            this.picCard3 = new System.Windows.Forms.PictureBox();
-            this.picCard4 = new System.Windows.Forms.PictureBox();
-            this.picCard5 = new System.Windows.Forms.PictureBox();
-            this.picCard2 = new System.Windows.Forms.PictureBox();
             this.button_redeal = new System.Windows.Forms.Button();
             this.label_hand_type = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_discard = new System.Windows.Forms.Button();
             this.button_reveal = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -45,72 +35,31 @@
             this.betButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button_home = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picCard1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCard3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCard4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCard5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCard2)).BeginInit();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picCard2 = new System.Windows.Forms.PictureBox();
+            this.picCard5 = new System.Windows.Forms.PictureBox();
+            this.picCard4 = new System.Windows.Forms.PictureBox();
+            this.picCard3 = new System.Windows.Forms.PictureBox();
+            this.picCard1 = new System.Windows.Forms.PictureBox();
+            this.star_count = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCard2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCard5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCard4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCard3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCard1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picCard1
-            // 
-            this.picCard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picCard1.Enabled = false;
-            this.picCard1.Location = new System.Drawing.Point(101, 225);
-            this.picCard1.Margin = new System.Windows.Forms.Padding(4);
-            this.picCard1.Name = "picCard1";
-            this.picCard1.Size = new System.Drawing.Size(125, 181);
-            this.picCard1.TabIndex = 0;
-            this.picCard1.TabStop = false;
-            // 
-            // picCard3
-            // 
-            this.picCard3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picCard3.Enabled = false;
-            this.picCard3.Location = new System.Drawing.Point(460, 225);
-            this.picCard3.Margin = new System.Windows.Forms.Padding(4);
-            this.picCard3.Name = "picCard3";
-            this.picCard3.Size = new System.Drawing.Size(125, 181);
-            this.picCard3.TabIndex = 1;
-            this.picCard3.TabStop = false;
-            // 
-            // picCard4
-            // 
-            this.picCard4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picCard4.Enabled = false;
-            this.picCard4.Location = new System.Drawing.Point(640, 225);
-            this.picCard4.Margin = new System.Windows.Forms.Padding(4);
-            this.picCard4.Name = "picCard4";
-            this.picCard4.Size = new System.Drawing.Size(125, 181);
-            this.picCard4.TabIndex = 2;
-            this.picCard4.TabStop = false;
-            // 
-            // picCard5
-            // 
-            this.picCard5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picCard5.Enabled = false;
-            this.picCard5.Location = new System.Drawing.Point(825, 225);
-            this.picCard5.Margin = new System.Windows.Forms.Padding(4);
-            this.picCard5.Name = "picCard5";
-            this.picCard5.Size = new System.Drawing.Size(125, 181);
-            this.picCard5.TabIndex = 3;
-            this.picCard5.TabStop = false;
-            // 
-            // picCard2
-            // 
-            this.picCard2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picCard2.Enabled = false;
-            this.picCard2.Location = new System.Drawing.Point(281, 225);
-            this.picCard2.Margin = new System.Windows.Forms.Padding(4);
-            this.picCard2.Name = "picCard2";
-            this.picCard2.Size = new System.Drawing.Size(125, 181);
-            this.picCard2.TabIndex = 4;
-            this.picCard2.TabStop = false;
             // 
             // button_redeal
             // 
@@ -135,56 +84,6 @@
             this.label_hand_type.TabIndex = 7;
             this.label_hand_type.Text = "label2";
             this.label_hand_type.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(281, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 181);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(825, 15);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(125, 181);
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(640, 15);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(125, 181);
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(460, 15);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(125, 181);
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(101, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 181);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // button_discard
             // 
@@ -322,11 +221,149 @@
             this.button_home.UseVisualStyleBackColor = true;
             this.button_home.Click += new System.EventHandler(this.home_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::AwesomePokerGameSln.Properties.Resources.star;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(1003, 146);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(52, 50);
+            this.pictureBox6.TabIndex = 23;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(281, 15);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 181);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(825, 15);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(125, 181);
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(640, 15);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(125, 181);
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(460, 15);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(125, 181);
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(101, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 181);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picCard2
+            // 
+            this.picCard2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCard2.Enabled = false;
+            this.picCard2.Location = new System.Drawing.Point(281, 225);
+            this.picCard2.Margin = new System.Windows.Forms.Padding(4);
+            this.picCard2.Name = "picCard2";
+            this.picCard2.Size = new System.Drawing.Size(125, 181);
+            this.picCard2.TabIndex = 4;
+            this.picCard2.TabStop = false;
+            // 
+            // picCard5
+            // 
+            this.picCard5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCard5.Enabled = false;
+            this.picCard5.Location = new System.Drawing.Point(825, 225);
+            this.picCard5.Margin = new System.Windows.Forms.Padding(4);
+            this.picCard5.Name = "picCard5";
+            this.picCard5.Size = new System.Drawing.Size(125, 181);
+            this.picCard5.TabIndex = 3;
+            this.picCard5.TabStop = false;
+            // 
+            // picCard4
+            // 
+            this.picCard4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCard4.Enabled = false;
+            this.picCard4.Location = new System.Drawing.Point(640, 225);
+            this.picCard4.Margin = new System.Windows.Forms.Padding(4);
+            this.picCard4.Name = "picCard4";
+            this.picCard4.Size = new System.Drawing.Size(125, 181);
+            this.picCard4.TabIndex = 2;
+            this.picCard4.TabStop = false;
+            // 
+            // picCard3
+            // 
+            this.picCard3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCard3.Enabled = false;
+            this.picCard3.Location = new System.Drawing.Point(460, 225);
+            this.picCard3.Margin = new System.Windows.Forms.Padding(4);
+            this.picCard3.Name = "picCard3";
+            this.picCard3.Size = new System.Drawing.Size(125, 181);
+            this.picCard3.TabIndex = 1;
+            this.picCard3.TabStop = false;
+            // 
+            // picCard1
+            // 
+            this.picCard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCard1.Enabled = false;
+            this.picCard1.Location = new System.Drawing.Point(101, 225);
+            this.picCard1.Margin = new System.Windows.Forms.Padding(4);
+            this.picCard1.Name = "picCard1";
+            this.picCard1.Size = new System.Drawing.Size(125, 181);
+            this.picCard1.TabIndex = 0;
+            this.picCard1.TabStop = false;
+            // 
+            // star_count
+            // 
+            this.star_count.AutoSize = true;
+            this.star_count.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.star_count.Location = new System.Drawing.Point(1061, 171);
+            this.star_count.Name = "star_count";
+            this.star_count.Size = new System.Drawing.Size(68, 23);
+            this.star_count.TabIndex = 24;
+            this.star_count.Text = "label2";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1063, 146);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 25);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Stars";
+            // 
             // FrmPlaygame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 554);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.star_count);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.button_home);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.betButton);
@@ -354,16 +391,17 @@
             this.Text = "FrmPlaygame";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPlaygame_FormClosed);
             this.Load += new System.EventHandler(this.FrmPlaygame_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picCard1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCard3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCard4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCard5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCard2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCard2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCard5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCard4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCard3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCard1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,5 +431,8 @@
     private System.Windows.Forms.Button betButton;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Button button_home;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label star_count;
+        private System.Windows.Forms.Label label2;
     }
 }

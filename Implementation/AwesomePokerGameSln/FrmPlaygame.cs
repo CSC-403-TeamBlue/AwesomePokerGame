@@ -42,6 +42,7 @@ namespace AwesomePokerGameSln {
             for (int c = 1; c <= 5; c++) {
                dealerCardPics[c - 1] = this.Controls.Find("pictureBox" + c.ToString(), true)[0] as PictureBox;
             }
+            star_count.Text = Stars.Amount.ToString();
         }
 
         // deal cards to the player and dealer
@@ -432,6 +433,7 @@ namespace AwesomePokerGameSln {
 
             //Update points displayed
             label1.Text = playerPoints.ToString();
+            star_count.Text = Stars.Amount.ToString();
             //If you have points to bet, redeal
             if (playerPoints > 0 & dealerPoints > 0)
             {
