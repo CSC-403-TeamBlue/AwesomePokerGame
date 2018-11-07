@@ -663,6 +663,16 @@ namespace AwesomePokerGameSln.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap locked_back {
+            get {
+                object obj = ResourceManager.GetObject("locked_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ninja_back {
             get {
                 object obj = ResourceManager.GetObject("ninja_back", resourceCulture);

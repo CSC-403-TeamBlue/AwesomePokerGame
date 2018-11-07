@@ -24,12 +24,14 @@ namespace AwesomePokerGameSln {
         private int dealerBet;
         private int playerPoints = 100;
         private int dealerPoints = 100;
+        private Bitmap backgroundImage;
 
         // create the form
         public FrmPlaygame() {
             InitializeComponent();
 
             Console.WriteLine("Amount of stars - " + Stars.Amount);
+            findImage();
 
             // create and display the cards for the player
             playerCardPics = new PictureBox[5];
@@ -43,6 +45,37 @@ namespace AwesomePokerGameSln {
                dealerCardPics[c - 1] = this.Controls.Find("pictureBox" + c.ToString(), true)[0] as PictureBox;
             }
             star_count.Text = Stars.Amount.ToString();
+        }
+
+        private void findImage() {
+            switch (CardBack.Kind)
+            {
+                case (CardBack.BackType.HALLOWEEN):
+                    {
+                        backgroundImage = CardImageHelper.getResource("halloween_back");
+                    }
+                    break;
+                case (CardBack.BackType.NINJA):
+                    {
+                        backgroundImage = CardImageHelper.getResource("ninja_back");
+                    }
+                    break;
+                case (CardBack.BackType.WALUIGI):
+                    {
+                        backgroundImage = CardImageHelper.getResource("waluigi_back");
+                    }
+                    break;
+                case (CardBack.BackType.GEORGE):
+                    {
+                        backgroundImage = CardImageHelper.getResource("washington_back");
+                    }
+                    break;
+                case (CardBack.BackType.CANADA):
+                    {
+                        backgroundImage = CardImageHelper.getResource("canada_back");
+                    }
+                    break;
+            }
         }
 
         // deal cards to the player and dealer
@@ -87,34 +120,7 @@ namespace AwesomePokerGameSln {
                 cards[index++] = card;
 
                 // change the dealer's card back depending on the theme selected from settings
-                switch(CardBack.Kind)
-                {
-                    case (CardBack.BackType.HALLOWEEN):
-                        {
-                            dealerCardPic.BackgroundImage = CardImageHelper.getResource("halloween_back");
-                        }
-                        break;
-                    case (CardBack.BackType.NINJA):
-                        {
-                            dealerCardPic.BackgroundImage = CardImageHelper.getResource("ninja_back");
-                        }
-                        break;
-                    case (CardBack.BackType.WALUIGI):
-                        {
-                            dealerCardPic.BackgroundImage = CardImageHelper.getResource("waluigi_back");
-                        }
-                        break;
-                    case (CardBack.BackType.GEORGE):
-                        {
-                            dealerCardPic.BackgroundImage = CardImageHelper.getResource("washington_back");
-                        }
-                        break;
-                    case (CardBack.BackType.CANADA):
-                        {
-                            dealerCardPic.BackgroundImage = CardImageHelper.getResource("canada_back");
-                        }
-                        break;
-                }
+                dealerCardPic.BackgroundImage = backgroundImage;
             }
 
             // set those cards as the dealer's hand and then determine the best combination of cards in the
@@ -288,10 +294,9 @@ namespace AwesomePokerGameSln {
 
             foreach (PictureBox dealerCardPic in dealerCardPics)
             {
-
-                dealerCardPic.BackgroundImage = CardImageHelper.getResource("halloween_back");
+                // change the dealer's card back depending on the theme selected from settings
+                dealerCardPic.BackgroundImage = backgroundImage;
             }
-
             // set those cards as the dealer's hand
             dealerHand = new Hand(cards);
 

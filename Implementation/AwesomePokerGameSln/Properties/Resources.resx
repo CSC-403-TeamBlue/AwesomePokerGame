@@ -7010,4 +7010,7 @@
   <data name="star" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="locked_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\locked_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

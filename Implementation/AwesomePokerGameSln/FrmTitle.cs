@@ -8,10 +8,34 @@ namespace AwesomePokerGameSln {
         // create the form
         public FrmTitle() {
             InitializeComponent();
+            checkLockStatus();
             settingsPanel.Visible = false;
             changeThemePanel.Visible = false;
             Console.WriteLine("Amount of stars - " + Stars.Amount);
             star_count.Text = Stars.Amount.ToString();
+        }
+
+        // check what card backs are locked
+        private void checkLockStatus() {
+            // check ninja
+            if (!CardBack.ninjaLock) {
+                deck_ninja.BackgroundImage = Resources.locked_back;
+            }
+            // check waluigi
+            if (!CardBack.waluigiLock)
+            {
+                deck_waluigi.BackgroundImage = Resources.locked_back;
+            }
+            // check george
+            if (!CardBack.georgeLock)
+            {
+                deck_george.BackgroundImage = Resources.locked_back;
+            }
+            // check canada
+            if (!CardBack.canadaLock)
+            {
+                deck_canada.BackgroundImage = Resources.locked_back;
+            }
         }
     
         // exit button
@@ -106,6 +130,7 @@ namespace AwesomePokerGameSln {
                     Stars.Amount -= 10;
                     star_count.Text = Stars.Amount.ToString();
                     CardBack.Kind = CardBack.BackType.NINJA;
+                    deck_ninja.BackgroundImage = Resources.ninja_back;
                     MessageBox.Show("Theme changed to Ninja", "Theme Change", MessageBoxButtons.OK);
                     CardBack.ninjaLock = true;
                 }
@@ -130,6 +155,7 @@ namespace AwesomePokerGameSln {
                     Stars.Amount -= 10;
                     star_count.Text = Stars.Amount.ToString();
                     CardBack.Kind = CardBack.BackType.WALUIGI;
+                    deck_waluigi.BackgroundImage = Resources.waluigi_back;
                     MessageBox.Show("Theme changed to Waluigi", "Theme Change", MessageBoxButtons.OK);
                     CardBack.waluigiLock = true;
                 }
@@ -154,6 +180,7 @@ namespace AwesomePokerGameSln {
                     Stars.Amount -= 10;
                     star_count.Text = Stars.Amount.ToString();
                     CardBack.Kind = CardBack.BackType.GEORGE;
+                    deck_george.BackgroundImage = Resources.washington_back;
                     MessageBox.Show("Theme changed to George Washington", "Theme Change", MessageBoxButtons.OK);
                     CardBack.georgeLock = true;
                 }
@@ -178,6 +205,7 @@ namespace AwesomePokerGameSln {
                     Stars.Amount -= 10;
                     star_count.Text = Stars.Amount.ToString();
                     CardBack.Kind = CardBack.BackType.CANADA;
+                    deck_canada.BackgroundImage = Resources.canada_back;
                     MessageBox.Show("Theme changed to Canada", "Theme Change", MessageBoxButtons.OK);
                     CardBack.canadaLock = true;
                 }
@@ -196,6 +224,11 @@ namespace AwesomePokerGameSln {
         private void star_count_Click(object sender, EventArgs e)
         {
             MessageBox.Show(":O", "!!!", MessageBoxButtons.OK);
+        }
+
+        private void changeThemePanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
