@@ -8,7 +8,7 @@ namespace AwesomePokerGameSln
 {
     static class Stars
     {
-        private static int _amount = 50;
+        private static int _amount = 25;
 
         public static int Amount
         {
