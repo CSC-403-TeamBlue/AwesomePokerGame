@@ -148,6 +148,8 @@ namespace AwesomePokerGameSln {
         {
             Hide();
             FrmTitle frmTitle = new FrmTitle();
+            frmTitle.FormBorderStyle = this.FormBorderStyle;
+            frmTitle.WindowState = this.WindowState;
             frmTitle.ShowDialog();
             Close();
         }

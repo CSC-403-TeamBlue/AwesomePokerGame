@@ -62,6 +62,8 @@ namespace AwesomePokerGameSln {
             // start the actual game form and hide this title form
             Hide();
             FrmPlaygame frmPlaygame = new FrmPlaygame();
+            frmPlaygame.FormBorderStyle = this.FormBorderStyle;
+            frmPlaygame.WindowState = this.WindowState;
             frmPlaygame.ShowDialog();
             Close();
         }
